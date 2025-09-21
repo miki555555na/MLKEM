@@ -56,8 +56,4 @@ def run_mlkem_test():
 
 
 if __name__ == "__main__":
-    # hash_G関数の引数が2つあるため、k_pke_keygen内の呼び出しを修正
-    def hash_G(data: bytes):
-        h = pol.hashlib.sha3_512(data).digest()
-        return h[:32], h[32:]
     run_mlkem_test()
